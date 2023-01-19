@@ -22,6 +22,13 @@ spring:
   cloud:
     function:
       definition: pack|label
+    stream:
+      bindings:
+        packlabel-in-0:
+          destination: order-accepted # The actual name at the broker that the binder binds to (RabbitMQ exchange)
+          group: ${spring.application.name}
+        packlabel-out-0:
+          destination: order-dispatched # The actual name at the broker that the binder binds to (RabbitMQ exchange)
   rabbitmq:
     host: localhost
     port: 5672
