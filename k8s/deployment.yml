@@ -27,3 +27,5 @@ spec:
           env:
             - name: SPRING_CLOUD_CONFIG_URI
               value: http://config-service
+            - name: SPRING_RABBITMQ_HOST
+              value: http://polar-rabbitmq
